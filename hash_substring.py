@@ -3,15 +3,15 @@
 def read_input():
     darbiba =input("Enter I or F: ")
     if "I" in darbiba:
-        pattern=input().rstrip()
-        text =input().rstrip()
+        pattern=input().strip()
+        text =input().strip()
 
     elif "F" in darbiba:
-        fileName="tests/06"
+        fileName='./tests/06'
         try:
             with open(fileName, 'r') as f:
-                pattern=f.readline()
-                text=f.readline()
+                pattern=f.readline().strip()
+                text=f.readline().strip()
         except Exception as j:
             print("Error:", str(j))
             return
