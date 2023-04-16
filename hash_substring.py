@@ -29,11 +29,12 @@ def get_occurrences(pattern, text):
     garumsPattern=len(pattern)
     garumsText=len(text)
     hashPattern=hash(pattern)
+    hashText= hash(text[:garumsPattern])
     # and return an iterable variable
     gadijumi=[]
     for i in range(garumsText-garumsPattern + 1):
        # hashText= hash(text[i:i + garumsPattern])
-        hashText= hash(text[:garumsPattern])
+        
         if hashText==hashPattern and pattern==text[i:i + garumsPattern]:
             gadijumi.append(i)
         if (i < garumsText-garumsPattern):
