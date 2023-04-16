@@ -1,7 +1,8 @@
 # python3
 
 def read_input():
-    darbiba =input("Enter I or F: ")
+    #darbiba =input("Enter I or F: ")
+    darbiba =input()
     if "I" in darbiba:
         pattern=input().strip()
         text =input().strip()
